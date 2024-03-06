@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: monserat;
-    src: url(fonts/Montserrat-Regular.ttf);
+    src: url(../fonts/montserrat-v26-latin-regular.woff2);
   }
 
   
@@ -38,18 +38,11 @@ html {
     height:100vh; 
     display: grid; 
     grid-gap: 1em;
-    /* grid-row-gap: 20px; 
-    grid-column-gap: 10px; */
-    /* grid-template-rows: 200px 1fr 100px; */ 
-    /* grid-template-columns: repeat(6, 1fr);  */
     grid-template-columns: repeat(auto-fit, minmax(min(33.3%, 100%), 1fr));
     grid-template-areas:  
     "header"
     "container"
     "footer"
-      /* "header header header header header header" 
-      "container container container container container container"
-      "footer footer footer footer footer footer" ;   */
   }
 
   .header { 
@@ -65,16 +58,9 @@ html {
     grid-area: footer;
   }
 
-  .block-tour{
-    grid-area: card card card;
-  }
-
   .header{
     margin: 2%;
     padding: 1%;
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center; */
   }
 
   .header-blick{
@@ -92,7 +78,7 @@ html {
     margin: 2% 0;
   }
 
-  
+   
   .menu li {
     margin-right: 10px;
     display: block;
@@ -102,13 +88,10 @@ html {
     overflow: hidden;
     font-size: 20px;
     font-weight: bold;
-    text-transform: uppercase;
-  }
+    text-transform: uppercase; 
+  } 
+   
 
-  .menu li:last-child {
-    padding-right: 0;
-    margin-right: 0;
-  }
 
   a{
     text-decoration: none;
@@ -137,16 +120,14 @@ a:focus, a:hover {
   }
 
     
+ 
+    
+ 
   .header .logo img {
     max-height: 91px;
     max-width: 100%;
   }
 
-   #header-main-menu input[type="checkbox"],
-   #header-main-menu .hamburger-lines {
-    display: none;
-   }
-   
    .container{
     padding-right: 15px;
     padding-left: 15px;
@@ -205,6 +186,11 @@ a:focus, a:hover {
     color: var(--text-description-clr);
     padding: 0 16px;
     margin: 0;
+    min-height: 100px;
+   }
+
+   #Tours .box-balloon .card .card-content .card-description {
+    min-height: 189px;
    }
 
    .card-title{
@@ -216,7 +202,8 @@ a:focus, a:hover {
     letter-spacing: normal;
     color: var(--main-clr, #123a32);
     margin: 16px 0 12px 0;
-    padding: 0 16px
+    padding: 0 16px;
+    min-height: 52px;
    }
 
    .title-block{
@@ -240,7 +227,6 @@ a:focus, a:hover {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-       /*  margin: 50px; */
     }
 
     .card{
@@ -396,8 +382,6 @@ a:focus, a:hover {
         background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
-    /* position: relative;
-    left:0; */
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
@@ -413,6 +397,7 @@ a:focus, a:hover {
         padding: 3% 5%;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
     }
 
     .about-us-left, .about-us-right{
@@ -423,28 +408,7 @@ a:focus, a:hover {
         position: relative;
     }
 
-    .about-us-title .text::after {
-        content: url(../img/vector.svg);
-        position: absolute;
-        left:  60px;
-        bottom: 0;
-    }
-
-    .about-us-img{
-        display: inline-block;
-        max-width: 100%;
-        position: absolute;
-        bottom: auto;
-        top: 220px;
-        left: 0;
-        right: auto;
-    }
-
-    .about-us-img img{
-        height: auto;
-        max-width: 100%;
-        object-fit: cover;
-    }
+    
 
     .about-us-info p:first-child {
         font-size: 14px;
@@ -538,7 +502,7 @@ a:focus, a:hover {
 
     
     .form-group input {
-        min-width: 370px;
+        min-width: 100px;
         border: none;
         outline: none;
         padding: 12px 24px;
@@ -580,7 +544,7 @@ a:focus, a:hover {
         transform: translateY(5px);
         box-shadow: 0 0 0 #df5334;
     }
-
+  
   /* nach oben */
 
 .block-up {
@@ -588,6 +552,7 @@ a:focus, a:hover {
     justify-content: flex-end;
     flex-direction: row;
   }
+
   .block-up a {
     padding: 30px 0;
   }
@@ -617,21 +582,36 @@ a:focus, a:hover {
     color: #333333;
   }
 
-  @media screen and (max-width: 1199px){
-    
-    .about-us-title .text::after{
-      display: none;
+  @media only screen and (min-width: 360px) {
+    .block-about{
+        flex-direction: column;
+        text-align: start;
     }
-  }
 
-  @media screen and (max-width: 991px){
+
+    .about-us-img{
+        display: inline-block;
+        max-width: 100%;
+        position: absolute;
+        bottom: auto;
+        top: 220px;
+        left: 0;
+        right: auto;
+    }
+
+    .about-us-img img{
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
     .logo {
         margin: 0 auto;
         text-align: center;
     }
 
     #header-main-menu {
-        opacity: 0.95;
+        opacity: 0.85;
       }
     
       #header-main-menu input[type="checkbox"],
@@ -698,19 +678,14 @@ a:focus, a:hover {
         height: 100vh;
         max-width: 300px;
         transform: translate(-150%);
-        display: flex;
         flex-direction: column;
-        margin-left: -58px;
-        padding-left: 50px;
+        padding-left: 60px;
+        margin-left: -40px;
+        padding-right: 50px;
         transition: transform 0.5s ease-in-out;
         box-shadow: 5px 0px 10px 0px #aaa;
       }
     
-      .menu li {
-        margin-bottom: 1.5rem;
-        font-size: 1.3rem;
-        font-weight: 500;
-      }
     
       .block-logo{
         order: 1;
@@ -731,8 +706,6 @@ a:focus, a:hover {
       #header-main-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-35deg);
       }
-    
-
 
       .btn-book a {
         font-size: 12px;
@@ -802,14 +775,6 @@ a:focus, a:hover {
     .footer-left{
         text-align: center;
     }
-    
-  }
-
-  @media screen and (max-width: 767px){
-    
-    .text::after{
-        display: none;
-    }
 
     .form-group input,
     .form-submit input {
@@ -818,21 +783,81 @@ a:focus, a:hover {
         margin: 10px auto;
     }
 
-    .block-about{        
-        flex-direction: column;
+   
+
+    .form-group input,
+    .form-submit input {
+        min-width: auto;
+        width: 100%;
+        margin: 10px auto;
     }
     
   }
 
-  @media screen and (max-width: 552px){
-  .btn-book a {
-    font-size: 10px;
-    padding: 7px 4px;
+  @media screen and (min-width: 552px){
+    .menu{
+        padding-left: 108px;
+    }
+
   }
-  
-  .form-submit input {
-    padding: 14px 34px;
+
+  @media screen and (min-width: 768px){
+  .block-about{
+    flex-direction: row;
+  }
+
+  .menu{
+    margin-left: -104px;
   }
   
 }
+
+  @media screen and (min-width: 902px){
+
+    .block-about{
+        text-align: start;
+    }
+    
+    .about-us-title .text::after {
+        content: url(../img/vector.svg);
+        position: absolute;
+        left:  3px;
+        top: 80px;
+    }
+   #header-main-menu input[type="checkbox"],
+   #header-main-menu .hamburger-lines {
+    display: none;
+   }
+
+   .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2% 0;
+    padding-top: 0;
+    height: auto;
+    max-width: 100%;
+    padding-left: 0;
+    transform: none;
+    box-shadow: none;
+    padding-right: 0;
+   }
+
+   
+   .footer-left{
+    text-align: start;
+    }
+
+
+    .footer-content{
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: row;
+      }
+  }
+
+
+  
+
 
