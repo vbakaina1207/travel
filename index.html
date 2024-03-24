@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="scripts/script.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Cappadocia</title>
 </head>
@@ -16,13 +17,13 @@
                     <img src="img/logo.png" alt="" class="logo-img">
                 </a>
             </div>
-            <nav id="header-main-menu" >
-                <input type="checkbox">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
+            <nav id="header-main-menu" >        
+                <input id="menu-toggle" type="checkbox">
+                <label for="menu-toggle" class="hamburger-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <ul id="main-menu" class="menu">
                     <li class="menu-item">
                         <a href="#Baloon">BALLOON FLIGHTS</a>
@@ -30,10 +31,10 @@
                     <li class="menu-item">
                         <a href="#Tours">Daily tours</a>
                     </li>
-                    <li>
+                    <li class="menu-item">
                         <a href="#About">About us</a>
                     </li>
-                    <li>
+                    <li class="menu-item">
                         <a href="#Contact">Contact</a>
                     </li>
                 </ul>
@@ -43,7 +44,21 @@
     
         <div class="container">
             <section>
-                <div class="banner"></div>
+                <div class="banner">
+                    <div class="banner-text">
+                        <h1 class="sidebarHeader">
+                        <strong>
+                            <span>YOUR NEXT ADVENTURE</span>
+                        </strong>
+                    </h1>                    
+                        <h4 class="sidebarHeader">
+                        <strong>
+                            <span>BALOONING IN CAPPADOCIA</span>
+                        </strong>
+                    </h4>
+                    </div>
+                    
+                </div>
                 <div class="block-tour" id="Baloon">
                     <div class="baloon" >
                         <div class="title-block">
@@ -54,7 +69,12 @@
                     <div class="box-balloon">
                         <div class="card">
                             <div class="card-img">
-                                <img src="img/balloon-flight-cappadocia.jpg" alt="">
+                                <div class="card-img1">
+                                    <img src="img/balloon-flight-cappadocia.jpg" alt="">
+                                </div>
+                                <div class="card-img2">
+                                    <img src="img/Cappadocia-Hot-Air-Ballooning2.jpg" alt="">
+                                </div>
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Standard Balloon Flight</h4>
@@ -173,7 +193,12 @@
                         </div>
                         <div class="card">
                             <div class="card-img">
-                                <img src="img/tury-tour-hot-air-balloon-flight-cappadocia.jpg" alt="">
+                                <div class="card-img1">
+                                    <img src="img/tury-tour-hot-air-balloon-flight-cappadocia.jpg" alt="">
+                                </div>
+                                <div class="card-img2">
+                                    <img src="img/hot-air-balloons-from-the-sky-in-cappadocia-2.jpg" alt="">
+                                </div>
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Deluxe Balloon Flight</h4>
@@ -243,7 +268,12 @@
                     <div class="box-balloon">
                         <div class="card">
                             <div class="card-img">
-                                <img src="img/guided-tours-cappadocia-6.jpg" alt="">
+                                <div class="card-img1">
+                                    <img src="img/guided-tours-cappadocia-6.jpg" alt="">
+                                </div>
+                                <div class="card-img2">
+                                    <img src="img/kapadokya-turlari-2.jpg" alt="">
+                                </div>
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Cappadocia Green Tour</h4>
@@ -363,7 +393,12 @@
                         </div>
                         <div class="card">
                             <div class="card-img">
-                                <img src="img/bike-tour.jpeg" alt="">
+                                <div class="card-img1">
+                                    <img src="img/bike-tour.jpeg" alt="">
+                                </div>
+                                <div class="card-img2">
+                                    <img src="img/WhatsApp-Imag2.jpeg" alt="">
+                                </div>
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Quad Bike (ATV) Tour SS</h4>
